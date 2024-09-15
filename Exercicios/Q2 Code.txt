@@ -1,0 +1,29 @@
+#define ledGreen 5
+#define ledRed 6
+
+
+/*2 – Monte um circuito com duas leds e faça elas 
+piscarem a cada 1 segundo, porém enquanto
+uma estiver acesa a outra deve estar apagada.*/
+
+void setup()
+{
+  
+    pinMode(ledGreen, OUTPUT);
+  	pinMode(ledRed, OUTPUT);
+    
+}
+
+void loop(){
+
+
+digitalWrite(ledRed, HIGH);
+digitalWrite(ledGreen, LOW);
+delay(1000);
+digitalWrite(ledGreen, HIGH);
+digitalWrite(ledRed, LOW);
+delay(1000);
+  
+  
+  
+}

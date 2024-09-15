@@ -1,0 +1,29 @@
+/*5 – Monte um circuito com 1 led e 1 botão,
+o led deve ficar aceso e quando o botão for
+pressionado o led deve apagar.*/
+
+#define led 2
+#define btn 3
+
+void setup()
+{
+  
+  pinMode(led, OUTPUT);
+  pinMode(btn, INPUT);
+  
+}
+
+void loop()
+{
+  
+  if(!digitalRead(btn)){
+  
+  digitalWrite(led, LOW);
+  
+  }else{
+  
+  digitalWrite(led, HIGH);
+  }
+  
+  
+}

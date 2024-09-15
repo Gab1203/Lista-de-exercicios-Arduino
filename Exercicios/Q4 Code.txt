@@ -1,0 +1,33 @@
+/*4 – Monte um circuito com 1 led e 1 botão, 
+quando o botão for pressionado o led deve
+acender.*/
+
+
+#define led 2
+#define btn 3
+
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(btn, INPUT);
+  
+  
+}
+
+void loop()
+{
+
+  
+  if(digitalRead(btn)){
+  
+    digitalWrite(led, HIGH);
+  
+  }else{
+  
+  digitalWrite(led, LOW);
+  
+  }
+  
+  
+}

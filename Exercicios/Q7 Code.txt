@@ -1,0 +1,75 @@
+#define btC 2
+#define btD 3
+#define btE 4
+#define btF 5
+#define btG 6
+#define btA 7
+#define btB 8
+#define piezo 9
+
+
+void setup()
+{
+  
+  pinMode(btC, INPUT);
+  pinMode(btD, INPUT);
+  pinMode(btE, INPUT);
+  pinMode(btF, INPUT);
+  pinMode(btG, INPUT);
+  pinMode(btA, INPUT);
+  pinMode(btB, INPUT);
+  pinMode(piezo, OUTPUT);
+  
+  Serial.begin(9600);
+  
+}
+
+void loop()
+{
+ 
+  
+  if(!digitalRead(btC)){
+  
+    tone(piezo, 261.63, 1000);
+    Serial.println("Nota: Do");
+    
+  }else if(!digitalRead(btD)){
+  
+  tone(piezo, 293.66, 1000);
+    Serial.println("Nota: Re");
+  
+  }else if(!digitalRead(btE)){
+  
+  tone(piezo, 329.63, 1000);
+    Serial.println("Nota: Mi");
+  
+  }else if(!digitalRead(btF)){
+  
+  tone(piezo, 349.23, 1000);
+    Serial.println("Nota: Fa");
+  
+  }else if(!digitalRead(btG)){
+  
+  tone(piezo, 392, 1000);
+    Serial.println("Nota: Sol");
+  
+  }else if(!digitalRead(btA)){
+  
+  tone(piezo, 440, 1000);
+    Serial.println("Nota: La");
+  
+  }else if(!digitalRead(btB)){
+  
+  tone(piezo, 493.88, 1000);
+    Serial.println("Nota: Si");
+  
+  }else{
+  
+  noTone(piezo);
+  }
+  
+  
+  
+  
+  
+}

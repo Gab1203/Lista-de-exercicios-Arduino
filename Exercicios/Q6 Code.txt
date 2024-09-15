@@ -1,0 +1,51 @@
+/*6 – Monte um circuito com 5 botões que devem 
+dizer frases diferentes ao apertar cada um via
+serial.*/
+
+#define btn1 2
+#define btn2 3
+#define btn3 4
+#define btn4 5
+#define btn5 6
+
+void setup()
+{
+  
+  Serial.begin(9600);
+  pinMode(btn1, INPUT);
+  pinMode(btn2, INPUT);
+  pinMode(btn3, INPUT);
+  pinMode(btn4, INPUT);
+  pinMode(btn5, INPUT);
+}
+
+void loop()
+{
+  
+  
+  if(digitalRead(btn1)){
+  
+  Serial.println("Hello, world!");
+  
+  }else if(digitalRead(btn2)){
+  
+    Serial.println("Salve salve, familia");
+    
+  }else if(digitalRead(btn3)){
+  Serial.println("Bao?");
+    
+    
+  }else if(digitalRead(btn4)){
+  
+    Serial.println("Eu sou um porco voador!");
+    
+  }else if(digitalRead(btn5)){
+  Serial.println("Lorem Ipsum");
+    
+    
+  }
+  
+  
+  
+  
+}
